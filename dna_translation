@@ -19,9 +19,7 @@ codontable = {
     'TGG':'W',
 }
 
-# Starting from ATG, splits into codons:
 dna_sample = input("Please enter the DNA sequence: \n")
-
 translation = ""
 
 
