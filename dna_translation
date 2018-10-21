@@ -25,10 +25,10 @@ translation = ""
 
 def mrna_chunks(mrna):
     start=mrna.find("ATG")
-    for start in range(start, len(mrna)):
+    for start in range(start, len(mrna),3):
         yield mrna[start:start + 3]
 
-triplets = list(mrna_chunks(dna_sample))[::3]
+triplets = list(mrna_chunks(dna_sample))
 
 for codon in triplets:
     if codon in codontable.keys():
