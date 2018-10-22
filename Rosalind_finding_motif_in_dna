@@ -1,0 +1,16 @@
+# Rosaling practice: 
+# To find a motif within a longer strand of DNA, returns indices of starting position of all motifs found
+
+DNA_sequence = input("DNA sequence to search: \n")
+motif = input("Motif: \n")
+all_indices_found = ""
+search_start = -1
+
+while True:
+    index_found = DNA_sequence.find(motif, search_start + 1)
+    if index_found == -1:
+        break
+    else:
+        all_indices_found += str(index_found + 1) + " "
+        search_start = index_found
+print(all_indices_found)
